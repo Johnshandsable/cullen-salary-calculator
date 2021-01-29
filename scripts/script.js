@@ -5,7 +5,7 @@ $(document).ready(function () {
 
   /*
   [x] A 'Submit' button should collect the form information, 
-  [] store the information to calculate monthly costs, 
+  [x] store the information to calculate monthly costs, 
   [] append information to the DOM and clear the input fields. 
   [] Using the stored information, calculate monthly costs 
   [] and append this to the to DOM. If the total monthly cost exceeds $20,000, 
@@ -34,7 +34,7 @@ function collectInformation() {
     jobTitle: $('#jobTitle').val(),
     annualSalary: annualSalary,
   };
-  console.log(employee);
+  // console.log(employee);
   addToMonthlyCosts(annualSalary);
   employees.push(employee);
 }
