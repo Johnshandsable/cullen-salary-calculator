@@ -71,6 +71,7 @@ function renderEmployees() {
         <td>${employee.jobTitle}</td>
         <td>$ ${employee.annualSalary}</td>
         <td>$ ${employee.monthlySalary}</td>
+        <td><button>Delete</button></td>
       </tr>
   `);
   }
