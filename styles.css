@@ -1,13 +1,18 @@
 button {
+  background: royalblue;
   border-radius: 4px;
+  font-size: 16px;
+  margin: 10px 10px;
+  padding: 10px;
 }
 
 form {
+  align-items: left;
   border: 2px solid black;
   border-radius: 4px;
-  display: inline-block;
-  box-sizing: border-box;
-  margin: 5px;
+  display: flex;
+  flex-direction: column;
+  width: 250px;
 }
 
 label {
@@ -16,19 +21,24 @@ label {
 
 input {
   border-radius: 4px;
-  display: inline-block;
+  display: flex;
   margin: 8px 5px;
   padding: 5px 8px;
-  box-sizing: border-box;
+}
+
+th {
+  margin: 10px;
 }
 
 /* Classes */
+.flexContainer {
+  display: flex;
+  width: 100%;
+}
+
 .styled-table {
   border-top: 2px solid black;
   border-radius: 4px;
-  box-sizing: border-box;
-  margin: 5px;
-  width: 100%;
 }
 
 .styled-table #monthlyHeader {

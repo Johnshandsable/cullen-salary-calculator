@@ -19,37 +19,20 @@
         job title, 
         annual salary
     -->
-    <form>
-      <label for="firstName">First</label>
-      <input type="text" id="firstName" placeholder="John" />
-      <label for="lastName">Last</label>
-      <input type="text" id="lastName" placeholder="Doe" />
-      <label for="idNumber">Employee ID</label>
-      <input type="text" id="idNumber" />
-      <label for="jobTitle">Occupation</label>
-      <input type="text" id="jobTitle" placeholder="Janitor" />
-      <label for="annualSalary">Annual Salary</label>
-      <input type="text" id="annualSalary" />
-      <button type="button" id="submitEmployeeForm">Submit</button>
-    </form>
-
-    <!-- TABLE FOR EMPLOYEE
-      employee: 
-        first name, 
-        last name, 
-        ID number, 
-        job title, 
-        annual salary
-    -->
-
-    <!-- Monthly Cost Info -->
-    <table class="styled-table" id="monthlyTable" >
-      <thead>
-        <tr>
-          <th id="monthlyHeader">Total Monthly Cost</th>
-        </tr>
-      </thead>
-      <tbody id="totalMonthly"></tbody>
+    <div class="flexContainer">
+      <form>
+        <label for="firstName">First</label>
+        <input type="text" id="firstName" placeholder="John" />
+        <label for="lastName">Last</label>
+        <input type="text" id="lastName" placeholder="Doe" />
+        <label for="idNumber">Employee ID</label>
+        <input type="text" id="idNumber" />
+        <label for="jobTitle">Occupation</label>
+        <input type="text" id="jobTitle" placeholder="Janitor" />
+        <label for="annualSalary">Annual Salary</label>
+        <input type="text" id="annualSalary" />
+        <button type="button" id="submitEmployeeForm">Submit</button>
+      </form>
 
     <!-- Employee Info -->
     <table class="styled-table">
@@ -76,5 +59,24 @@
       </tbody>
       -->
     </table>
+  </div>
+
+    <!-- TABLE FOR EMPLOYEE
+      employee: 
+        first name, 
+        last name, 
+        ID number, 
+        job title, 
+        annual salary
+    -->
+
+    <!-- Monthly Cost Info -->
+    <table class="styled-table" id="monthlyTable" >
+      <thead>
+        <tr>
+          <th id="monthlyHeader">Total Monthly Cost</th>
+        </tr>
+      </thead>
+      <tbody id="totalMonthly"></tbody>
   </body>
 </html>

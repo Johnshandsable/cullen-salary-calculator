@@ -8,11 +8,12 @@ $(document).ready(function () {
   [x] store the information to calculate monthly costs, 
   [x] append information to the DOM and clear the input fields. 
   [x] Using the stored information, calculate monthly costs 
-  [] and append this to the to DOM. If the total monthly cost exceeds $20,000, 
-  [] add a red background color to the total monthly cost.
+  [x] and append this to the to DOM. If the total monthly cost exceeds $20,000, 
+  [x] add a red background color to the total monthly cost.
   */
 
   $('#submitEmployeeForm').on('click', submitForm); // event handler for submitButton
+  $(document).on('click', '.deleteButton', deleteEmployee);
 });
 
 let employees = [];
@@ -21,6 +22,18 @@ function submitForm() {
   console.log('Form submitted');
   collectInformation();
 } // end submitForm
+
+function deleteEmployee() {
+  console.log('delete button clicked');
+  let idNumber = this.id;
+  for (let index = 0; index < employees.length; index++) {
+    if (employees[index].idNumber == this.id) {
+      employees.splice(index, 1);
+      break;
+    }
+  }
+  renderEmployees();
+} // end deleteEmployee
 
 function collectInformation() {
   // collects information from user inputs
@@ -71,7 +84,7 @@ function renderEmployees() {
         <td>${employee.jobTitle}</td>
         <td>$ ${employee.annualSalary}</td>
         <td>$ ${employee.monthlySalary}</td>
-        <td><button>Delete</button></td>
+        <td><button id="${employee.idNumber}" class="deleteButton">Delete</button></td>
       </tr>
   `);
   }
@@ -82,6 +95,9 @@ function renderEmployees() {
   `);
   if (monthlyCosts > 20000) {
     $('#monthlyTable').css('background-color', 'red');
+  } else {
+    $('#monthlyTable').css('background-color', 'green'); // ideally only happens if it needs to
+    // but not sure how to implement
   }
 } // end renderEmployees
 
