@@ -34,20 +34,20 @@
         <button type="button" id="submitEmployeeForm">Submit</button>
       </form>
 
-    <!-- Employee Info -->
-    <table class="styled-table">
-      <thead>
-        <tr>
-          <th>First</th>
-          <th>Last</th>
-          <th>Employee ID</th>
-          <th>Occupation</th>
-          <th>Annual Salary</th>
-          <th>Monthly Costs</th>
-        </tr>
-      </thead>
-      <tbody id="employeeInfo"></tbody>
-      <!-- APPEND TO DOM USING jQuery
+      <!-- Employee Info -->
+      <table class="styled-table">
+        <thead>
+          <tr>
+            <th>First</th>
+            <th>Last</th>
+            <th>Employee ID</th>
+            <th>Occupation</th>
+            <th>Annual Salary</th>
+            <th>Monthly Costs</th>
+          </tr>
+        </thead>
+        <tbody id="employeeInfo">
+          <!-- APPEND TO DOM USING jQuery
       <tbody>
           <tr>
               <td>John</td>
@@ -56,10 +56,10 @@
               <td></td>
               <td></td>
           </tr>
-      </tbody>
       -->
-    </table>
-  </div>
+        </tbody>
+      </table>
+    </div>
 
     <!-- TABLE FOR EMPLOYEE
       employee: 
@@ -71,12 +71,13 @@
     -->
 
     <!-- Monthly Cost Info -->
-    <table class="styled-table" id="monthlyTable" >
+    <table class="styled-table" id="monthlyTable">
       <thead>
         <tr>
           <th id="monthlyHeader">Total Monthly Cost</th>
         </tr>
       </thead>
       <tbody id="totalMonthly"></tbody>
+    </table>
   </body>
 </html>
