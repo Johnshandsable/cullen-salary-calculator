@@ -21,10 +21,10 @@ let employees = [];
 function submitForm() {
   console.log('Form submitted');
   collectInformation();
-}
+} // end submitForm
 
 function collectInformation() {
-  console.log('Collecting information from the input fields');
+  // console.log('Collecting information from the input fields');
   let annualSalary = Number($('#annualSalary').val());
   let idNumber = Number($('#idNumber').val());
   const employee = {
@@ -38,28 +38,32 @@ function collectInformation() {
   addToMonthlyCosts(annualSalary);
   employees.push(employee);
   renderEmployees();
-}
+} // end collectInformation
 
 function addToMonthlyCosts(salary) {
-  console.log('adding monthly costs up');
-  monthlyCosts += salary / 12; // salary represent annual income here
-  console.log(monthlyCosts);
-}
+  // console.log('adding monthly costs up');
+  let employeeMonthly = Math.round(salary / 12);
+  monthlyCosts += employeeMonthly; // salary represent annual income here
+  return employeeMonthly; // return only the individual monthly income
+} // end addToMonthlyCosts
 
 function renderEmployees() {
   console.log('render employees');
   let $employeeInfo = $('#employeeInfo');
   $employeeInfo.empty();
-  // render to employeeInfo
   for (let employee of employees) {
-    console.log(employee.firstName);
+    // console.log(employee.firstName);
+    // Possibly add something on the table for users to delete people
+    console.log(employee.annualSalary);
+    console.log(employee.annualSalary / 12);
     $employeeInfo.append(`
       <tr>
         <td>${employee.firstName}</td>
         <td>${employee.lastName}</td>
         <td>${employee.idNumber}</td>
         <td>${employee.jobTitle}</td>
-        <td>${employee.annualSalary}</td>
+        <td>$ ${employee.annualSalary}</td>
+        <td>$ ${addToMonthlyCosts(employee.annualSalary)}</td>
       </tr>
   }
   `);
