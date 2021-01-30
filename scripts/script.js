@@ -52,10 +52,7 @@ function renderEmployees() {
   let $employeeInfo = $('#employeeInfo');
   $employeeInfo.empty();
   for (let employee of employees) {
-    // console.log(employee.firstName);
     // Possibly add something on the table for users to delete people
-    console.log(employee.annualSalary);
-    console.log(employee.annualSalary / 12);
     $employeeInfo.append(`
       <tr>
         <td>${employee.firstName}</td>
@@ -65,7 +62,6 @@ function renderEmployees() {
         <td>$ ${employee.annualSalary}</td>
         <td>$ ${addToMonthlyCosts(employee.annualSalary)}</td>
       </tr>
-  }
   `);
   }
 }
