@@ -37,10 +37,31 @@ function collectInformation() {
   // console.log(employee);
   addToMonthlyCosts(annualSalary);
   employees.push(employee);
+  renderEmployees();
 }
 
 function addToMonthlyCosts(salary) {
   console.log('adding monthly costs up');
-  monthlyCosts += salary;
+  monthlyCosts += salary / 12; // salary represent annual income here
   console.log(monthlyCosts);
+}
+
+function renderEmployees() {
+  console.log('render employees');
+  let $employeeInfo = $('#employeeInfo');
+  $employeeInfo.empty();
+  // render to employeeInfo
+  for (let employee of employees) {
+    console.log(employee.firstName);
+    $employeeInfo.append(`
+      <tr>
+        <td>${employee.firstName}</td>
+        <td>${employee.lastName}</td>
+        <td>${employee.idNumber}</td>
+        <td>${employee.jobTitle}</td>
+        <td>${employee.annualSalary}</td>
+      </tr>
+  }
+  `);
+  }
 }
