@@ -6,13 +6,13 @@ $(document).ready(function () {
   /*
   [x] A 'Submit' button should collect the form information, 
   [x] store the information to calculate monthly costs, 
-  [] append information to the DOM and clear the input fields. 
+  [x] append information to the DOM and clear the input fields. 
   [] Using the stored information, calculate monthly costs 
   [] and append this to the to DOM. If the total monthly cost exceeds $20,000, 
   [] add a red background color to the total monthly cost.
   */
 
-  $('#submitEmployeeForm').on('click', submitForm);
+  $('#submitEmployeeForm').on('click', submitForm); // event handler for submitButton
 });
 
 let monthlyCosts = 0;
@@ -24,7 +24,7 @@ function submitForm() {
 } // end submitForm
 
 function collectInformation() {
-  // console.log('Collecting information from the input fields');
+  // collects information from user inputs
   let annualSalary = Number($('#annualSalary').val());
   let idNumber = Number($('#idNumber').val());
   const employee = {
@@ -35,14 +35,14 @@ function collectInformation() {
     annualSalary: annualSalary,
   };
   // console.log(employee);
-  addToMonthlyCosts(annualSalary);
   employees.push(employee);
   renderEmployees();
 } // end collectInformation
 
 function addToMonthlyCosts(salary) {
-  // console.log('adding monthly costs up');
+  // adds up monthly costs
   let employeeMonthly = Math.round(salary / 12);
+  console.log(employeeMonthly);
   monthlyCosts += employeeMonthly; // salary represent annual income here
   return employeeMonthly; // return only the individual monthly income
 } // end addToMonthlyCosts
@@ -50,7 +50,10 @@ function addToMonthlyCosts(salary) {
 function renderEmployees() {
   console.log('render employees');
   let $employeeInfo = $('#employeeInfo');
-  $employeeInfo.empty();
+  $employeeInfo.empty(); // emptying out previous employee info so it doesn't get added on
+  let $monthlyCost = $('#totalMonthly');
+  $monthlyCost.empty();
+
   for (let employee of employees) {
     // Possibly add something on the table for users to delete people
     $employeeInfo.append(`
@@ -64,4 +67,16 @@ function renderEmployees() {
       </tr>
   `);
   }
+  $monthlyCost.append(`
+    <tr>
+      <td>$ ${monthlyCosts}</td>
+    </tr>
+  `);
+  if (monthlyCosts > 20000) {
+    $('#monthlyTable').css('background-color', 'red');
+  }
+} // end renderEmployees
+
+function clearInputs() {
+  console.log('clearing inputs');
 }
