@@ -9,10 +9,9 @@ button {
 form {
   align-items: left;
   border: 2px solid black;
-  border-radius: 4px;
   display: flex;
   flex-direction: column;
-  width: 250px;
+  width: 200px;
 }
 
 label {
@@ -28,7 +27,6 @@ input {
 
 th,
 td {
-  border: 1px solid green;
   margin: 10px;
   padding: 8px;
 }
@@ -36,6 +34,7 @@ td {
 /* Classes */
 .flexContainer {
   display: flex;
+  justify-content: left;
   width: 100%;
 }
 
@@ -48,8 +47,6 @@ td {
 
 #monthlyTable {
   background-color: green;
-  display: inline-block;
-  width: 100%;
 }
 
 #employeeInfo {

@@ -11,6 +11,17 @@
   <body>
     <h1>jQuery-Salary-Calculator</h1>
 
+    <div class="flexContainer">
+      <!-- Monthly Cost Info -->
+      <table class="styled-table" id="monthlyTable">
+        <thead>
+          <tr>
+            <th id="monthlyHeader">Total Monthly Cost</th>
+          </tr>
+        </thead>
+        <tbody id="totalMonthly"></tbody>
+      </table>
+    </div>
     <!-- INPUT FORM FOR EMPLOYEE
       employee: 
         first name, 
@@ -47,37 +58,16 @@
           </tr>
         </thead>
         <tbody id="employeeInfo">
-          <!-- APPEND TO DOM USING jQuery
-      <tbody>
-          <tr>
-              <td>John</td>
-              <td>Doe</td>
-              <td></td>
-              <td></td>
-              <td></td>
-          </tr>
-      -->
+          <!-- <!-- TABLE FOR EMPLOYEE
+            employee: 
+              first name, 
+              last name, 
+              ID number, 
+              job title, 
+              annual salary
+          -->
         </tbody>
       </table>
     </div>
-
-    <!-- TABLE FOR EMPLOYEE
-      employee: 
-        first name, 
-        last name, 
-        ID number, 
-        job title, 
-        annual salary
-    -->
-
-    <!-- Monthly Cost Info -->
-    <table class="styled-table" id="monthlyTable">
-      <thead>
-        <tr>
-          <th id="monthlyHeader">Total Monthly Cost</th>
-        </tr>
-      </thead>
-      <tbody id="totalMonthly"></tbody>
-    </table>
   </body>
 </html>
