@@ -1,10 +1,8 @@
-# Salary Calculator
-
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
+# jQuery Salary Calculator
 
 ## Description
 
-This project is an employee salary calculator built over a weekend. Features include taking in user inputs, storing those inputs, and updating them the screen. The data is collected into a table similar to an Excel spreadsheet.
+This project is an employee salary calculator built over a weekend using primarily jQuery. Features include recording user inputs such as annual salaries, reporting monthly costs for the client, and updating salary costs and monthly costs on-screen. The data is collected into a table similar to an Excel spreadsheet.
 
 Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md).
 

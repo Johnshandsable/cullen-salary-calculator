@@ -28,7 +28,7 @@ function deleteEmployee() {
   console.log('delete button clicked');
   let idNumber = this.id;
   for (let index = 0; index < employees.length; index++) {
-    if (employees[index].idNumber == this.id) {
+    if (employees[index].idNumber == idNumber) {
       employees.splice(index, 1);
       break;
     }
@@ -97,7 +97,7 @@ function renderEmployees() {
   if (monthlyCosts > 20000) {
     $('#monthlyTable').css('background-color', 'red');
   } else {
-    $('#monthlyTable').css('background-color', 'green');
+    $('#monthlyTable').css('background-color', '#27ae60');
   }
 } // end renderEmployees
 

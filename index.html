@@ -9,10 +9,12 @@
     <title>jQuery-Salary-Calculator</title>
   </head>
   <body>
-    <h1>jQuery-Salary-Calculator</h1>
-
+    <!-- <img src="grinch.png" /> -->
+    <h1 id="pageTitle">jQuery-Salary-Calculator</h1>
     <div class="flexContainer">
       <!-- Monthly Cost Info -->
+      <!-- <h2 id="monthlyHeader">Total Monthly Cost</h2> -->
+
       <table class="styled-table" id="monthlyTable">
         <thead>
           <tr>
@@ -32,15 +34,15 @@
     -->
     <div class="flexContainer">
       <form>
-        <label for="firstName">First</label>
+        <label for="firstName"><strong>First</strong></label>
         <input type="text" id="firstName" placeholder="John" required />
-        <label for="lastName">Last</label>
+        <label for="lastName"><strong>Last</strong></label>
         <input type="text" id="lastName" placeholder="Doe" required />
-        <label for="idNumber">Employee ID</label>
+        <label for="idNumber"><strong>Employee ID</strong></label>
         <input type="text" id="idNumber" required />
-        <label for="jobTitle">Occupation</label>
+        <label for="jobTitle"><strong>Occupation</strong></label>
         <input type="text" id="jobTitle" placeholder="Janitor" required />
-        <label for="annualSalary">Annual Salary</label>
+        <label for="annualSalary"><strong>Annual Salary</strong></label>
         <input type="text" id="annualSalary" required />
         <button type="button" id="submitEmployeeForm">Submit</button>
       </form>
