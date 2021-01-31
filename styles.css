@@ -31,6 +31,14 @@ td {
   padding: 8px;
 }
 
+th {
+  border: 1px solid black;
+}
+
+td {
+  border: 1px dotted black;
+}
+
 /* Classes */
 .flexContainer {
   display: flex;

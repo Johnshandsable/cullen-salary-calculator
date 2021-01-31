@@ -21,6 +21,7 @@ let employees = [];
 function submitForm() {
   console.log('Form submitted');
   collectInformation();
+  clearInputs();
 } // end submitForm
 
 function deleteEmployee() {
@@ -96,13 +97,14 @@ function renderEmployees() {
   if (monthlyCosts > 20000) {
     $('#monthlyTable').css('background-color', 'red');
   } else {
-    $('#monthlyTable').css('background-color', 'green'); // ideally only happens if it needs to
-    // but not sure how to implement
+    $('#monthlyTable').css('background-color', 'green');
   }
 } // end renderEmployees
 
 function clearInputs() {
   console.log('clearing inputs');
+  // TODO: ADD Form Validation if users forget to put in info, do not erase other info
+
   $('#firstName').val('');
   $('#lastName').val('');
   $('#idNumber').val('');
